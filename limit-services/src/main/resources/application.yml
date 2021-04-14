@@ -1,0 +1,6 @@
+
+server:
+  port: 8093
+limit-service:
+  max: 97
+  min: 23
