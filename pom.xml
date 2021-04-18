@@ -1,12 +1,14 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.springcloud</groupId>
-  <artifactId>spring-cloud</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>pom</packaging>
-  <description>starting spring cloud</description>
-  
-  	<properties>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.springcloud</groupId>
+	<artifactId>spring-cloud</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<description>starting spring cloud</description>
+
+	<properties>
 		<java.version>11</java.version>
 		<maven.build.timestamp.format>yyyyMMdd-HHmm</maven.build.timestamp.format>
 		<maven.compiler.source>${java.version}</maven.compiler.source>
@@ -20,8 +22,8 @@
 		<spring-boot.version>2.2.6.RELEASE</spring-boot.version>
 		<timestamp>${maven.build.timestamp}</timestamp>
 	</properties>
-	
-		<dependencyManagement>
+
+	<dependencyManagement>
 		<dependencies>
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
@@ -39,10 +41,21 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-  
-  <modules>
-  	<module>core</module>
-  	<module>limit-services</module>
-  	<module>cloud-config-server</module>
-  </modules>
+
+
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+	</build>
+
+	<modules>
+		<module>core</module>
+		<module>limit-services</module>
+		<module>cloud-config-server</module>
+		<module>currency-exchange-service</module>
+	</modules>
 </project>

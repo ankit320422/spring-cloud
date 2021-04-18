@@ -1,0 +1,12 @@
+appVersion: '@timestamp@'
+
+
+cloud-config-server:
+  port: 8888
+  
+currency-exchange-service:
+  port: 8081
+  
+  
+limit-services:
+  port: 8082

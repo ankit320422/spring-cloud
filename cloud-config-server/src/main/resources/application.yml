@@ -1,7 +1,14 @@
 server:
-  port: 8888
+  port: ${${spring.application.name}.port}
   
 spring:
   application:
-    name: cloud-config-server
-    
+    name: '@project.artifactId@'
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/ankit320422/spring-cloud.git
+          skip-ssl-validation: true
+  profiles:
+    include: common
